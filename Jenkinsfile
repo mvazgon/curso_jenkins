@@ -42,7 +42,6 @@ pipeline{
                     }else{
                         println "Es cualquier otro dia, no se hace nada"
                     }
-                    writeFile(file:"file.tmp",text:map)
                 }                
             }
             
@@ -51,9 +50,7 @@ pipeline{
         {
             steps{
                 script{
-                    textToMap =readFile(file:"file.tmp")
-                    println textToMap
-                    //println dia + " " +map[dia]+" "+fecha
+                    println dia + " "+fecha
                 }
             }
         }
