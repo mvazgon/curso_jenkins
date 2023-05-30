@@ -30,16 +30,20 @@ pipeline{
                     println map
                     
                     if(dia==2){
-                        println "El usuarios es:"+env.USER
+                        println dia
+                        println "Los dias: ${dia}; el usuario es: ${env.USER}"
                     }else if(dia==3){
-                        println "Es "+map[dia]+" el tiempo que hace es: "+fecha
+                        println dia
+                        println "Es ${map[dia]} el tiempo que hace es: ${fecha}"
                     }else if(dia==4){
-                        println "Es "+map[dia]+" clonar repo"
+                        println dia
+                        println "Es ${map[dia]}; y hay que clonar repo"
                         git branch: "main" , url: "https://github.com/mvazgon/curso_jenkins.git"
                         sh """
                             ls -lrtha
                         """
                     }else{
+                        println dia
                         println "Es cualquier otro dia, no se hace nada"
                     }
                 }                
