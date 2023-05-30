@@ -39,7 +39,7 @@ pipeline{
                             ls -lrtha
                         """
                     }else{
-                        println dia
+                        println "Porque entras aquí ${dia}"
                         println "Es cualquier otro dia, no se hace nada"
                     }
                 }                
