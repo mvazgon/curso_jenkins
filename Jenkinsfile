@@ -27,17 +27,17 @@ pipeline{
                 script{
                     def map=[1:"lunes",2:"Martes",3:"Miercoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
                     if(dia.toInteger()==2){
-                        println "Los dias: ${dia}; el usuario es: ${env.USER}"
+                        Mensaje="Los dias: ${map[dia]}; tenemos que saber que el usuario es: ${env.USER}"
                     }else if(diato.Integer()==3){
-                        println "Es ${map[dia]} el tiempo que hace es: ${fecha}"
+                        Mensaje"Es ${map[dia]} el tiempo que hace es: ${fecha}"
                     }else if(dia.toInteger()==4){
-                        println "Es ${map[dia]}; y hay que clonar repo"
+                        Mensaje="Es ${map[dia]}; y hay que clonar repo"
                         git branch: "main" , url: "https://github.com/mvazgon/curso_jenkins.git"
                         sh """
                             ls -lrtha
                         """
                     }else{
-                        println "Es cualquier otro dia, no se hace nada"
+                        Mensaje="Es cualquier otro dia, no se hace nada"
                     }
                 }                
             }
@@ -47,7 +47,7 @@ pipeline{
         {
             steps{
                 script{
-                    println dia + " "+fecha
+                    println "${Mensaje}"
                 }
             }
         }
