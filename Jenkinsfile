@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage("Clonado de repositorio"){
+        stage("Saludo."){
             steps{
-                git branch: "develop", url:"https://github.com/mvazgon/curso_jenkins.git" 
+                echo "Hola Mundo"
             }
         }
     }
