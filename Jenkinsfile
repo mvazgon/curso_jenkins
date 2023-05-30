@@ -41,7 +41,7 @@ pipeline{
                     }else{
                         Mensaje="Es cualquier otro dia, no se hace nada"
                     }
-                    println "Se ha calculado la acción en funcion de los dias". 
+                    println "Se ha calculado la acción en funcion de los dias."
                 }                
             }
             
