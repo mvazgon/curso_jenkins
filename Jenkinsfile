@@ -42,15 +42,19 @@ pipeline{
                     }else{
                         println "Es cualquier otro dia, no se hace nada"
                     }
-                }
-                env.map=map
+                    writeFile(file:"file.tmp",text:map)
+                }                
             }
             
         }
         stage("Recopilacion de variables")
         {
             steps{
-                println dia + " " +map[dia]+" "+fecha
+                script{
+                    textToMap =readFile(file:"file.tmp")
+                    println textToMap
+                    //println dia + " " +map[dia]+" "+fecha
+                }
             }
         }
     }       
