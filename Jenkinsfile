@@ -25,7 +25,8 @@ pipeline{
                     println dia
                     println map
                     if(dia==2){
-                        println ${env.user}
+                        userEnv=User.current()
+                        println "El usuarios es:"+userEnv
                     }else if(dia==3){
                         fecha = new Date().getDateTimeString()
                         println "Es "+map[dia]+" el tiempo que hace es: "+fecha
