@@ -36,7 +36,7 @@ pipeline{
                         println "Es "+map[dia]+" el tiempo que hace es: "+fecha
                     }else if(dia==4){
                         println "Es "+map[dia]+" clonar repo"
-                        git branch: main , url: https://github.com/mvazgon/curso_jenkins.git
+                        git branch: "main" , url: "https://github.com/mvazgon/curso_jenkins.git"
                         sh """
                             ls -lrtha
                         """
