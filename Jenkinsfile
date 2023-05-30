@@ -24,7 +24,7 @@ pipeline{
         stage("Dia de la semana"){
             steps{
                 script{
-                    def env.map=[1:"lunes",2:"Martes",3:"Miercoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
+                    def map=[1:"lunes",2:"Martes",3:"Miercoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
                     
                     println dia
                     println map
@@ -43,6 +43,7 @@ pipeline{
                         println "Es cualquier otro dia, no se hace nada"
                     }
                 }
+                env.map=map
             }
             
         }
