@@ -20,9 +20,6 @@ pipeline{
         stage("Dia de la semana"){
             steps{
                 script{
-                    def fecha = new Date()
-                    def formatFecha = new java.text.SimpleDateFormat("yyyy-MM-dd")
-                    def fechaFormateada = formatFecha.format(fecha)
                     def dia=new Date().getDay()
                     def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
                     println dia
@@ -35,6 +32,7 @@ pipeline{
             steps{
                 script{
                     if (dia==3){
+                        fecha = new Date().getDateTimeString()
                         println "Es "+map[dia]+" el tiempo que hace es: "+fecha
                     }else if(dia==4){
                         println "Es "+map[dia]+" clonar repo"
