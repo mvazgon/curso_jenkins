@@ -8,7 +8,7 @@
 // ENTREGABLES:
 // Codigo de Jenkins
 // Repositorio de Github.
-def dia=""
+
 pipeline{
     agent any
     stages{
@@ -24,13 +24,6 @@ pipeline{
                     def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
                     println dia
                     println map
-                }
-            }
-        }
-        stage("Acciones")
-        {
-            steps{
-                script{
                     if (dia==3){
                         fecha = new Date().getDateTimeString()
                         println "Es "+map[dia]+" el tiempo que hace es: "+fecha
@@ -44,7 +37,7 @@ pipeline{
                         println "Es cualquier otro dia, no se hace nada"
                     }
                 }
-            }   
-        } 
+            }
+        }
     }       
 }
