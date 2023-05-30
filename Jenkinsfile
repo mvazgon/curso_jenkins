@@ -25,10 +25,6 @@ pipeline{
             steps{
                 script{
                     def map=[1:"lunes",2:"Martes",3:"Miercoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
-                    
-                    println dia
-                    println map
-                    
                     if(dia==2){
                         println dia
                         println "Los dias: ${dia}; el usuario es: ${env.USER}"
