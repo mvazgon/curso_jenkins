@@ -40,6 +40,12 @@ pipeline{
                     }
                 }
             }
+            
+        }
+        stage{
+            steps{
+                println dia + " " +map[dia]+" "+fecha
+            }
         }
     }       
 }
