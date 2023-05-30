@@ -23,9 +23,8 @@ pipeline{
         }
         stage("Dia de la semana"){
             steps{
-
                 script{
-                    def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
+                    def env.map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
                     
                     println dia
                     println map
@@ -33,7 +32,6 @@ pipeline{
                     if(dia==2){
                         println "El usuarios es:"+env.USER
                     }else if(dia==3){
-                
                         println "Es "+map[dia]+" el tiempo que hace es: "+fecha
                     }else if(dia==4){
                         println "Es "+map[dia]+" clonar repo"
