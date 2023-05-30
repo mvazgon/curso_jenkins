@@ -25,13 +25,13 @@ pipeline{
             steps{
                 script{
                     def map=[1:"lunes",2:"Martes",3:"Miercoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
-                    if(dia==2){
+                    if(dia.toInteger()==2){
                         println dia
                         println "Los dias: ${dia}; el usuario es: ${env.USER}"
-                    }else if(dia==3){
+                    }else if(diato.Integer()==3){
                         println dia
                         println "Es ${map[dia]} el tiempo que hace es: ${fecha}"
-                    }else if(dia==4){
+                    }else if(dia.toInteger()==4){
                         println dia
                         println "Es ${map[dia]}; y hay que clonar repo"
                         git branch: "main" , url: "https://github.com/mvazgon/curso_jenkins.git"
