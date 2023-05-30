@@ -19,15 +19,16 @@ pipeline{
         }
         stage("Dia de la semana"){
             steps{
+                def dia=new Date().getDay()
+                def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
+                def fecha = new Date().getDateTimeString()
                 script{
-                    def dia=new Date().getDay()
-                    def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
                     println dia
                     println map
                     if(dia==2){
                         println "El usuarios es:"+env.USER
                     }else if(dia==3){
-                        fecha = new Date().getDateTimeString()
+                
                         println "Es "+map[dia]+" el tiempo que hace es: "+fecha
                     }else if(dia==4){
                         println "Es "+map[dia]+" clonar repo"
