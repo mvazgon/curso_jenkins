@@ -5,9 +5,9 @@
 // Si el dia es jueves, clonar tu repositorio y la rama principal
 // Si el día es viernes, no hacer nada.
 
-ENTREGABLES:
-- Codigo de Jenkins
-- Repositorio de Github.
+// ENTREGABLES:
+// Codigo de Jenkins
+// Repositorio de Github.
 
 pipeline{
     agent any
