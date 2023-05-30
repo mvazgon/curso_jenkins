@@ -22,7 +22,7 @@ pipeline{
                 echo "Hola Mundo"
             }
         }
-        stage("Dia de la semana"){
+        stage("Procesamos el dia de la semana"){
             steps{
                 script{
                     def map=[1:"lunes",2:"Martes",3:"Miercoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
@@ -43,7 +43,7 @@ pipeline{
             }
             
         }
-        stage("Recopilacion de variables")
+        stage("Imprimimos lo que hacemos.")
         {
             steps{
                 script{
