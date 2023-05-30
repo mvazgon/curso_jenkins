@@ -8,7 +8,7 @@
 // ENTREGABLES:
 // Codigo de Jenkins
 // Repositorio de Github.
-
+def dia=""
 pipeline{
     agent any
     stages{
