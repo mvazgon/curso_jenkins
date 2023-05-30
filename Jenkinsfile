@@ -42,7 +42,8 @@ pipeline{
             }
             
         }
-        stage{
+        stage("Recopilacion de variables")
+        {
             steps{
                 println dia + " " +map[dia]+" "+fecha
             }
