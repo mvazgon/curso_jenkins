@@ -15,6 +15,7 @@ pipeline{
         def dia=new Date().getDay()
         def fecha = new Date().getDateTimeString()
         def Mensaje=""
+        def day=""
     }
     stages{
         stage("Saludo."){
@@ -29,7 +30,8 @@ pipeline{
                     if(dia.toInteger()==2){
                         Mensaje="Los dias: ${map[dia]}; tenemos que saber que el usuario es: ${env.USER}"
                     }else if(diato.Integer()==3){
-                        Mensaje"Es ${map[dia]} el tiempo que hace es: ${fecha}"
+                        
+                        Mensaje"Es ${map[dia]}, el tiempo que hace es: ${fecha}"
                     }else if(dia.toInteger()==4){
                         Mensaje="Es ${map[dia]}; y hay que clonar repo"
                         git branch: "main" , url: "https://github.com/mvazgon/curso_jenkins.git"
@@ -39,6 +41,7 @@ pipeline{
                     }else{
                         Mensaje="Es cualquier otro dia, no se hace nada"
                     }
+                    println "Se ha calculado la acción en funcion de los dias". 
                 }                
             }
             
