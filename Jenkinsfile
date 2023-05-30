@@ -18,11 +18,13 @@ pipeline{
             }
         }
         stage("Dia de la semana"){
-            script{
-                def dia=new Date().getDay()
-                def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
-                println dia
-                println map
+            steps{
+                script{
+                    def dia=new Date().getDay()
+                    def map=[1:"lunes",2:"Martes",3:"Miércoles",4:"Jueves",5:"Viernes",6:"Sabado",7:"Domingo"]
+                    println dia
+                    println map
+                }
             }
         }
     }       
